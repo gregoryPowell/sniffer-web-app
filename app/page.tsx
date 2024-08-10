@@ -1,6 +1,7 @@
 import { getSystemDetails } from "@/lib/system";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import MyButton from "@/components/ui/button";
 
 export default async function Page() {
   const systemInfo = await getSystemDetails();
@@ -8,7 +9,10 @@ export default async function Page() {
   return (
     <main className="min-h-screen bg-background flex flex-col items-center justify-center p-6">
       <h1 className="text-3xl font-bold mb-6 text-foreground">Raspberry Pi</h1>
-
+      <MyButton />
+      <a target="_blank" href="http://google.com">
+        <button id="bt">Test Link</button>
+      </a>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>System Information</CardTitle>
